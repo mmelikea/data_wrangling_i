@@ -314,3 +314,28 @@ Import a SAS file.
 pulse_df=
   read_sas("data/public_pulse_data.sas7bdat")
 ```
+
+## Base R …
+
+don’t do this
+
+``` r
+litters_df=
+  read.csv("data/FAS_litters.csv")
+
+litters_df$Gr
+```
+
+## Export data
+
+We have a code that “cleans” data and need to export the result.
+
+``` r
+litters_df_cleaned=
+   read.csv("data/FAS_litters.csv")
+
+litters_df_cleaned =
+  janitor::clean_names(litters_df_cleaned)
+
+write_csv(litters_df_cleaned, "data/litters_cleaned.csv")
+```
