@@ -112,5 +112,15 @@ mutate(
   wt_gain= gd18_weight-gd0_weight,
   group=str_to_lower(group)
 )
- ```
+```
+
+ 
+## 'arrange'
+
+
+```{r}
+arrange(litters_df, gd0_weight)
+arrange(litters_df, group, gd0_weight)
+```
+
 
